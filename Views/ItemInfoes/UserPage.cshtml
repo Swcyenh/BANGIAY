@@ -1,0 +1,21 @@
+﻿@model List<ItemInfo>
+<div class="row">
+    @foreach (var item in Model)
+    {
+        Console.WriteLine(item.ItemName);
+        <div class="col-md-3">
+            <div class="card mb-6">
+                <img src="@item.ImagePath" class="card-img-top img" alt="Product Image">
+                <div class="card-body">
+                    <h5 class="card-title">@item.ItemName</h5>
+                    <p class="card-text">@item.Size</p>
+                    <p class="card-text">Price: $@item.Price</p>
+                    <p class="card-text">Color: @item.Color</p>
+                    <a href="#" class="btn btn-primary">Buy Now</a>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+
